@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+span {
+    @apply text-lg font-bold cursor-pointer text-white
+}
+ion-icon {
+    @apply w-6 h-6 hover:text-white text-black pr-5 transition-all duration-1000
+}
+.repo {
+    @apply transition-all duration-500
+}
