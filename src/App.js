@@ -13,7 +13,7 @@ function App() {
   const handleSubmit = (e) => {
         e.preventDefault();
       const fetchData = async () => {
-          const datas = await axios.get(`${baseURL}${userName}/access_token=${TOKEN}`)
+          const datas = await axios.get(`${baseURL}${userName}`)
           setUser(datas?.data)
       }
       fetchData()
@@ -63,8 +63,8 @@ function App() {
                 <div className="max-lg:w-4/5 flex bg-c2 w-2/5   flex-wrap items-center border">
                     {
                         repos?.map((repo, i) =>(
-                            <a target="_blank" className="bg-c3 cursor-pointer repo w-1/5  border-b border-r border-c2 hover:border-white hover:bg-c1 text-white  text-xs text-center px-1 py-1" href={repo?.html_url}>
-                                <div className="" key={i}>{repo.name.substring(0,14)}</div>
+                            <a key={i} target="_blank" className="bg-c3 cursor-pointer repo w-1/5  border-b border-r border-c2 hover:border-white hover:bg-c1 text-white  text-xs text-center px-1 py-1" href={repo?.html_url}>
+                                <div className="" >{repo.name.substring(0,14)}</div>
                             </a>
                         ))
                     }
